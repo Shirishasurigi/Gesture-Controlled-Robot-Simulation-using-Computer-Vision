@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Controlled Robot Simulation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🤖 Gesture Robot Simulator
+    </div>
+
+    <div class="status">
+        🟢 Ready
+    </div>
+
+</header>
+
+
+<div class="main-container">
+
+    <div class="left-panel">
+
+        <div class="card">
+
+            <h2>📷 Live Camera</h2>
+
+            <div class="camera-placeholder">
+
+                <img 
+                    id="camera"
+                    src="{{ url_for('video_feed') }}"
+                    style="
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                        display:block;
+                        border-radius:12px;
+                    "      
+                    alt="Camera Feed">
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="right-panel">
+
+        <div class="card">
+
+            <h2>🤖 Simulation Arena</h2>
+
+            <div class="simulator-placeholder">
+
+                <img
+                    src="{{ url_for('simulator') }}"
+                    id="simulator"
+                    style="
+                        width:100%;
+                        height:100%;
+                        object-fit:contain;
+                        border-radius:12px;
+                    "
+                    alt="Robot Simulator"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="dashboard">
+
+    <div class="info-card">
+
+        <h3>🖐 Gesture</h3>
+
+        <p id="gesture">Waiting...</p>
+
+    </div>
+
+    <div class="info-card">
+
+        <h3>⚡ Speed</h3>
+
+        <p id="speed">4 px/frame</p>
+
+    </div>
+
+</div>
+
+<footer>
+
+    Gesture Controlled Robot Simulation
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
