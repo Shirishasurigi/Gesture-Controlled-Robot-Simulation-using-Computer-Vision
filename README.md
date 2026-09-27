@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# 🤖 Gesture Controlled Robot Simulation
 
 
@@ -365,4 +366,6 @@ B.Tech – Artificial Intelligence \& Machine Learning
 
 
 This project is developed for academic and internship purposes.
+
+=======
 
